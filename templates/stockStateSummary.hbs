@@ -1,0 +1,45 @@
+<div class="row">
+    <div class="large-12 columns">
+
+        <nav class="top-bar" data-topbar role="navigation">
+            <section class="top-bar-section">
+                <!-- Left Nav Section -->
+                <ul class="left">
+                    <li><a {{action "sortByVolume" "volume:asc"}}>Most Active By Volume</a></li>
+                    <li><a {{action "sortByGainers"}}>Gainers</a></li>
+                    <li><a {{action "sortByLosers"}}>Losers</a></li>
+                </ul>
+            </section>
+        </nav>
+
+        <table style="width: 100%">
+            <thead>
+                <tr>
+                    <td>Company</td>
+                    <td>Open Price</td>
+                    <td>Current Price</td>
+                    <td>Change</td>
+                    <td>Share Volume</td>
+                    <td></td>
+                </tr>
+            </thead>
+
+            <tbody>
+                {{#each item in controller}}
+                    <tr>
+                        <td>{{#link-to 'company' item.id}}{{item.company}}{{/link-to}}</td>
+                        <td>{{item.openPrice}}</td>
+                        <td>{{item.currentPrice}}</td>
+                        <td>{{item.change}}</td>
+                        <td>{{item.shareVolume}}</td>
+                        <td>{{#link-to 'placeBidOrder' item.id}}<button class="tiny radius secondary left">Buy</button>{{/link-to}}
+                            {{#link-to 'placeSellOrder' item.id}}<button class="tiny radius secondary right">Sell</button>{{/link-to}}</td>
+                    </tr>
+                {{/each}}
+            </tbody>
+        </table>
+
+        {{outlet}}
+
+    </div>
+</div>

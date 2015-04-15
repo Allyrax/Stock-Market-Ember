@@ -1,0 +1,38 @@
+<h2>Place Bid for Company</h2>
+
+<form>
+    <div class="row">
+        <div class="large-10 columns">
+            <div class="row collapse">
+                <div class="large-2 columns">
+                    <span class="prefix">Volume</span>
+                </div>
+                <div class="large-10 columns">
+                    {{input value=volume  id="volume" type="number" }}
+                </div>
+            </div>
+
+            <div class="row collapse">
+                <div class="large-2 columns">
+                    <span class="prefix">Price</span>
+                </div>
+                <div class="large-10 columns">
+                    {{input value=price  id="price" type="number" }}
+                </div>
+            </div>
+        </div>
+        <div class="large-2 columns">
+            <img src="/images/facebook.png" />
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="large-6 columns">
+            <button class="radius expand" {{action 'submit'}}>Submit</button>
+        </div>
+        <div class="large-6 columns">
+            <button class="secondary radius expand" {{action 'cancel'}}>Cancel</button>
+        </div>
+    </div>
+</form>

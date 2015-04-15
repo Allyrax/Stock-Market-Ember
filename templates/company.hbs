@@ -1,0 +1,120 @@
+<div class="row">
+    <div class="large-5 columns text-center"><h4>Market By Order</h4></div>
+    <div class="large-5 columns text-center"><h4>Market By Price</h4></div>
+    <div class="large-2 columns text-center"><h4>Symbol</h4></div>
+</div>
+
+<div class="row">
+    <div class="large-10 columns">
+
+        <table class="left" width="24%">
+            <thead>
+                <tr>
+                    <td colspan="2"  class="text-center">
+                        Buy
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center">
+                        Volume
+                    </td>
+                    <td class="text-center">
+                        Price
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each buyOrder in controller}}
+                    <tr>
+                        <td>{{buyOrder.price}}</td>
+                    </tr>
+                {{/each}}
+            </tbody>
+        </table>
+
+        <table class="left" width="24%">
+            <thead>
+            <tr>
+                <td colspan="2" class="text-center">
+                    Sell
+                </td>
+            </tr>
+            <tr>
+                <td class="text-center">
+                    Price
+                </td>
+                <td class="text-center">
+                    Volume
+                </td>
+            </tr>
+            </thead>
+            <tbody>
+            {{#each buyOrder in controller}}
+                <tr>
+                    <td>{{buyOrder.price}}</td>
+                </tr>
+            {{/each}}
+            </tbody>
+        </table>
+
+        <table class="right" width="24%">
+            <thead>
+            <tr>
+                <td colspan="3" class="text-center">
+                    Buy
+                </td>
+            </tr>
+            <tr>
+                <td class="text-center">
+                    #
+                </td>
+                <td class="text-center">
+                    Volume
+                </td>
+                <td class="text-center">
+                    Price
+                </td>
+            </tr>
+            </thead>
+            <tbody>
+            {{#each buyOrder in controller}}
+                <tr>
+                    <td>{{buyOrder.price}}</td>
+                </tr>
+            {{/each}}
+            </tbody>
+        </table>
+
+        <table class="right" width="24%">
+            <thead>
+            <tr>
+                <td colspan="3" class="text-center">
+                    Sell
+                </td>
+            </tr>
+            <tr>
+                <td class="text-center">
+                    Price
+                </td>
+                <td class="text-center">
+                    Volume
+                </td>
+                <td class="text-center">
+                    #
+                </td>
+            </tr>
+            </thead>
+            <tbody>
+            {{#each buyOrder in controller}}
+                <tr>
+                    <td>{{buyOrder.price}}</td>
+                </tr>
+            {{/each}}
+            </tbody>
+        </table>
+    </div>
+
+    <div class="large-2 columns">
+        <img src="/images/{{unbound model.company}}.png" class="right"/>
+    </div>
+</div>
